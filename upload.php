@@ -15,6 +15,8 @@ function autoloadController($className) {
 
 spl_autoload_register("autoloadModel");
 spl_autoload_register("autoloadController");
+
+$studentarray = array();
 if(isset($_POST["submit"]))
 {
     $name = $_POST["name"];
