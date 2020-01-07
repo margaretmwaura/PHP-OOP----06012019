@@ -38,4 +38,31 @@ if(isset($_POST["submit"]))
 
     echo "This is the occupation of the student " . $occupation;
     echo "This are the personal details of the student " . $personal;
+
+
+
+
+    echo '<table border="0" cellspacing="2" cellpadding="2"> 
+      <tr> 
+          <th>Student Gender </th> 
+          <th>Student name</th> 
+          <th>Student grade</th> 
+          <th>Student age</th> 
+          <th>Student stream</th> 
+         <th>Student Occupation</th> 
+          <th>Personal info</th> 
+      </tr>
+       <tr> 
+                  <td>'.$newhuman ->gender.'</td> 
+                  <td>'.$newhuman -> name .'</td> 
+                  <td>'.$newhuman -> grade.'</td> 
+                  <td>'.$newhuman -> age.'</td> 
+                  <td>'.$newhuman -> stream.'</td> 
+                  <td>'.$occupation.'</td> 
+                  <td>'.$personal.'</td> 
+              </tr>
+              </table>';
+
 }
+
+
