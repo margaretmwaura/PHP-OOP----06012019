@@ -1,9 +1,12 @@
 <?php
-
-trait health
+namespace healthna
 {
-    public function healthstatus($boolwan)
+    trait health
     {
-        return $boolwan;
+        public function healthStatus($boolwan)
+        {
+            return $boolwan;
+        }
     }
 }
+

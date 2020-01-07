@@ -1,6 +1,13 @@
 <?php
-interface  detailsinterface
+namespace detailinterfacename
 {
-    public  function getPersonalDetails();
-    public  function getOccupation();
+    interface  detailsinterface
+    {
+        public  function getPersonalDetails();
+        public  function getOccupation();
+
+    }
 }
+
+
+
