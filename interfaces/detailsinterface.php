@@ -1,5 +1,4 @@
 <?php
-
 interface  detailsinterface
 {
     public  function getPersonalDetails();

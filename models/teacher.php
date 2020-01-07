@@ -10,12 +10,10 @@ class teacher extends human implements detailsinterface
     {
         return ($this->name .$this->gender.$this->placeofwork.$this->children.$this->id_number);
     }
-
     public function getPersonalDetails()
     {
         return ($this -> placeofwork. $this->children . $this->id_number);
     }
-
     public function getOccupation()
     {
         return("Teacher");

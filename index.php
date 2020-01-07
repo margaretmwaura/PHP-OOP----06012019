@@ -12,7 +12,7 @@ echo "
        <input type=\"text\" name=\"class\" id=\"class\" required>
         <input type=\"text\" name=\"age\" id=\"age\" required>
         <input type=\"text\" name=\"stream\" id=\"stream\" required>
-    
+       <input type=\"text\" name=\"status\" id=\"status\" required>
     <input type=\"submit\" value=\"submit\" name=\"submit\">
 </form>
 <html>

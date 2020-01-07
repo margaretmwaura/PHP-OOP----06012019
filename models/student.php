@@ -2,6 +2,8 @@
 
 class student extends human implements detailsinterface
 {
+
+    use health;
     // Declare  properties
     public $grade = " ";
     public $age = " ";

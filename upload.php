@@ -24,11 +24,11 @@ if(isset($_POST["submit"]))
     $grade = $_POST["class"];
     $age = $_POST["age"];
     $stream = $_POST["stream"];
-
+    $stats = $_POST["status"];
   //The next step is creating the human
     $newhuman = new student();
-    $newhuman ->gender = $gender;
-    $newhuman -> name = $name;
+    $newhuman -> getGender = $gender;
+    $newhuman -> getName  = $name;
     $newhuman -> grade = $grade;
     $newhuman -> age = $age;
     $newhuman -> stream = $stream;
@@ -44,15 +44,17 @@ if(isset($_POST["submit"]))
           <th>Student stream</th> 
          <th>Student Occupation</th> 
           <th>Personal info</th> 
+          <th>Health status</th>
       </tr>
        <tr> 
-                  <td>'.$newhuman ->gender.'</td> 
-                  <td>'.$newhuman -> name .'</td> 
+                  <td>'.$newhuman -> getGender .'</td> 
+                  <td>'.$newhuman -> getName .'</td> 
                   <td>'.$newhuman -> grade.'</td> 
                   <td>'.$newhuman -> age.'</td> 
                   <td>'.$newhuman -> stream.'</td> 
                   <td>'.$occupation.'</td> 
                   <td>'.$personal.'</td> 
+                   <td>'.$newhuman -> healthstatus($stats).'</td> 
               </tr>
               </table>';
 
@@ -69,8 +71,8 @@ if(isset($_POST["submitt"]))
 
     //The next step is creating the human
     $teacher = new teacher();
-    $teacher -> name = $namet;
-    $teacher -> gender = $gendert;
+    $teacher -> getName = $namet;
+    $teacher -> getGender = $gendert;
     $teacher -> placeofwork = $placew;
     $teacher -> children = $childrenn;
     $teacher -> id_number = $id_num;
@@ -89,8 +91,8 @@ if(isset($_POST["submitt"]))
           <th>Personal info</th> 
       </tr>
        <tr> 
-                  <td>'.$teacher -> gender.'</td> 
-                  <td>'.$teacher -> name .'</td> 
+                  <td>'.$teacher -> getGender.'</td> 
+                  <td>'.$teacher -> getName .'</td> 
                   <td>'.$teacher -> placeofwork.'</td> 
                   <td>'.$teacher -> children.'</td> 
                   <td>'.$teacher -> id_number.'</td> 
