@@ -30,17 +30,8 @@ if(isset($_POST["submit"]))
     $newhuman -> grade = $grade;
     $newhuman -> age = $age;
     $newhuman -> stream = $stream;
-    $details = $newhuman -> getstudent();
     $occupation = $newhuman -> getOccupation();
     $personal = $newhuman -> getPersonalDetails();
-
-    echo "This are the details of the user that have been collected " . $details ;
-
-    echo "This is the occupation of the student " . $occupation;
-    echo "This are the personal details of the student " . $personal;
-
-
-
 
     echo '<table border="0" cellspacing="2" cellpadding="2"> 
       <tr> 
@@ -58,6 +49,49 @@ if(isset($_POST["submit"]))
                   <td>'.$newhuman -> grade.'</td> 
                   <td>'.$newhuman -> age.'</td> 
                   <td>'.$newhuman -> stream.'</td> 
+                  <td>'.$occupation.'</td> 
+                  <td>'.$personal.'</td> 
+              </tr>
+              </table>';
+
+};
+
+
+if(isset($_POST["submitt"]))
+{
+    $namet = $_POST["name"];
+    $gendert = $_POST["gender"];
+    $placew = $_POST["placeofwork"];
+    $childrenn = $_POST["children"];
+    $id_num = $_POST["id_number"];
+
+    //The next step is creating the human
+    $teacher = new teacher();
+    $teacher -> name = $namet;
+    $teacher -> gender = $gendert;
+    $teacher -> placeofwork = $placew;
+    $teacher -> children = $childrenn;
+    $teacher -> id_number = $id_num;
+    $details = $teacher -> getteacher();
+    $occupation = $teacher -> getOccupation();
+    $personal = $teacher -> getPersonalDetails();
+
+    echo '<table border="0" cellspacing="2" cellpadding="2"> 
+      <tr> 
+          <th>Teacher Gender </th> 
+          <th>Teacher name</th> 
+          <th>Teacher placeofwork</th> 
+          <th>Teacher children</th> 
+          <th>Teacher id_num</th> 
+         <th>Teacher Occupation</th> 
+          <th>Personal info</th> 
+      </tr>
+       <tr> 
+                  <td>'.$teacher -> gender.'</td> 
+                  <td>'.$teacher -> name .'</td> 
+                  <td>'.$teacher -> placeofwork.'</td> 
+                  <td>'.$teacher -> children.'</td> 
+                  <td>'.$teacher -> id_number.'</td> 
                   <td>'.$occupation.'</td> 
                   <td>'.$personal.'</td> 
               </tr>

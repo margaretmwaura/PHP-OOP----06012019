@@ -6,7 +6,7 @@ echo "
 <html>
 <body>
 <form action=\"upload.php\" method=\"post\" enctype=\"multipart/form-data\">
-    Enter your details : 
+    Enter your details (Student form): 
        <input type=\"text\" name=\"name\" id=\"name\" required>
        <input type=\"text\" name=\"gender\" id=\"gender\" required>
        <input type=\"text\" name=\"class\" id=\"class\" required>
@@ -20,8 +20,6 @@ echo "
 
 
 
+
 ";
 
-
-
-?>
